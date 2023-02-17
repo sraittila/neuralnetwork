@@ -48,14 +48,14 @@ def gradientDecent(theta, learningRate,epoch,xtraining, ytraining):
 
 
 data = readData("AirQualityUCI.csv")
-shuffledData = randomTrainingAndTestSet(data)
+dataSet = randomTrainingAndTestSet(data)
 theta = np.array([-4,12])
 print("Loss: ")
-print(calculateLoss(theta,shuffledData[2],shuffledData[3]))
-theta = gradientDecent(theta,0.0001, 8000, shuffledData[0], shuffledData[1])
+print(calculateLoss(theta,dataSet[2],dataSet[3]))
+theta = gradientDecent(theta,0.0001, 8000, dataSet[0], dataSet[1])
 print(theta)
 print("Loss: ")
-print(calculateLoss(theta,shuffledData[2],shuffledData[3]))
+print(calculateLoss(theta,dataSet[2],dataSet[3]))
 
 
 
